@@ -1,29 +1,327 @@
-* { margin: 0; padding: 0; box-sizing: border-box; } body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }header { /* *** UPDATE HERE: Changed URL to a relative path for your local image *** */ background-image: url('./header-image.jpg'); background-size: cover; background-position: center; color: white; text-align: center; padding: 6rem 2rem; } header h1 { font-size: 2.5rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.7); } header p { font-style: italic;margin-top: 0.5rem; font-size: 1.5rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.7); } main { display: flex; gap: 1.5rem;max-width: 1200px; margin: 2rem auto; padding: 0 1rem; } section { flex: 1; padding: 2rem; background-size: cover;background-position: center; border-radius: 8px; min-height: 400px; position: relative; color: white; } section::before {content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(0, 0, 0, 0.4); border-radius: 8px;z-index: 1; } section h2, section p { position: relative; z-index: 2; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); }#himalayas { background-image: url('https://images.unsplash.com/photo-1652543393067-281cea9b8c02?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); } #jerusalem { background-image: url('https://www.hillel.org/wp-content/uploads/college-images/Hebrew_University.jpg'); } #newyork {background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/NYC_Downtown_Manhattan_Skyline_seen_from_Paulus_Hook_2019-12-20_IMG_7347_FRD.jpg/2560px-NYC_Downtown_Manhattan_Skyline_seen_from_Paulus_Hook_2019-12-20_IMG_7347_FRD.jpg'); } h2 { color: white; margin-bottom: 1rem; } footer { background-color: #B8860B; color: white; text-align: center; padding: 1rem; margin-top: 2rem; } section { transition: transform 0.3s ease, box-shadow 0.3sease; } section:hover { transform: scale(1.05); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); }
+* { margin: 0; padding: 0; box-sizing: border-box; } body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }header { /* *** UPDATE HERE: Changed URL to a relative path for your local image *** */ background-image: url('./header-image.jpg'); background-size: cover; background-position: center; color: white; text-align: center; padding: 6rem 2rem; } header {
+    overflow: hidden;
+    position: relative;
+}
 
-.social-links-header {
+header h1 { 
+    font-size: 2.5rem; 
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+    white-space: nowrap;
+    display: inline-block;
+    margin-top: 4rem;
+} header p { font-style: italic;margin-top: 0.5rem; font-size: 1.5rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.7); } main { display: flex; gap: 1.5rem;max-width: 1200px; margin: 2rem auto; padding: 0 1rem; } section { flex: 1; padding: 2rem; background-size: cover;background-position: center; border-radius: 8px; min-height: 400px; position: relative; color: white; } section::before {content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(0, 0, 0, 0.4); border-radius: 8px;z-index: 1; } section h2, section p { position: relative; z-index: 2; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); }
+
+.section-link {
+    text-decoration: none;
+    display: block;
+    flex: 1;
+}
+
+#the-wanderer { background-color: #4A90E2; }
+#knowledge-hungary { background-color: #50C878; }
+#shifty-careers { background-color: #FF6B6B; }
+#dream-project { background-color: #9B59B6; }
+#contact { background-color: #F39C12; }
+
+h2 { color: white; margin-bottom: 1rem; } footer { background-color: #B8860B; color: white; text-align: center; padding: 1rem; margin-top: 2rem; } section { transition: transform 0.3s ease, box-shadow 0.3s ease; cursor: pointer; } section:hover { transform: scale(1.05); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); }
+
+.social-links-top {
     display: flex;
     justify-content: flex-end;
-    gap: 1rem;
-    padding: 1rem 2rem;
-    margin: 1rem 2rem 2rem auto;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background-color: rgba(0, 0, 0, 0.3);
 }
 
-.social-links-header a {
+.social-links-top a {
     color: white;
     text-decoration: none;
-    font-size: 0.9rem;
-    padding: 0.4rem 0.8rem;
-    border: 1px solid rgba(255, 255, 255, 0.5);
-    border-radius: 4px;
-    background-color: rgba(255, 255, 255, 0.1);
+    font-size: 1rem;
+    padding: 0.4rem 0.5rem;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.15);
     transition: all 0.3s ease;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
 }
 
-.social-links-header a:hover {
-    background-color: rgba(255, 255, 255, 0.3);
-    border-color: white;
+.social-links-top a[aria-label="Facebook"] {
+    background-color: #1877F2;
+    color: white;
+}
+
+.social-links-top a[aria-label="LinkedIn"] {
+    background-color: #0077B5;
+    color: white;
+}
+
+.social-links-top a[aria-label="Twitter"] {
+    background-color: #1DA1F2;
+    color: white;
+}
+
+.social-links-top a[aria-label="GitHub"] {
+    background-color: #181717;
+    color: white;
+}
+
+.social-links-top a[aria-label="Instagram"] {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    color: white;
+}
+
+.social-links-top a:hover {
+    transform: translateY(-2px) scale(1.1);
+    opacity: 0.9;
+}
+
+.main-menu {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 0.5rem 2rem;
+    flex-wrap: wrap;
+    margin-top: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+}
+
+.main-menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 400;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s ease;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    position: relative;
+    letter-spacing: 0.5px;
+}
+
+.main-menu a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.main-menu a:hover {
+    color: rgba(255, 255, 255, 0.9);
     transform: translateY(-2px);
+}
+
+.main-menu a:hover::after {
+    width: 80%;
+}
+
+.menu-item.dropdown {
+    position: relative;
+}
+
+.menu-item.dropdown > a {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.menu-item.dropdown > a i {
+    font-size: 0.7rem;
+    transition: transform 0.3s ease;
+}
+
+.menu-item.dropdown:hover > a i {
+    transform: rotate(180deg);
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    min-width: 220px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    margin-top: 0.5rem;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.menu-item.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    display: block;
+    transition: all 0.3s ease;
+    font-size: 0.8rem;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dropdown-content a:last-child {
+    border-bottom: none;
+}
+
+.dropdown-content a:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+    padding-left: 2rem;
+    transform: none;
+}
+
+.dropdown-content a::after {
+    display: none;
+}
+
+.quote-of-the-day {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.quote-of-the-day blockquote h2 {
+    text-align: center;
+    color: #999;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    margin-top: 0;
+    font-weight: 600;
+    letter-spacing: 1px;
+    position: relative;
+    z-index: 1;
+}
+
+.quote-of-the-day blockquote {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border: 3px solid #B8860B;
+    padding: 1.5rem 2rem;
+    margin: 0 auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    text-align: center;
+    max-width: 600px;
+}
+
+.quote-of-the-day blockquote::before {
+    content: '"';
+    font-size: 4rem;
+    color: #B8860B;
+    opacity: 0.2;
+    position: absolute;
+    top: 0.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: Georgia, serif;
+    line-height: 1;
+}
+
+.quote-of-the-day blockquote:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.quote-of-the-day blockquote p {
+    font-size: 1.1rem;
+    font-style: italic;
+    color: #2c3e50;
+    line-height: 1.5;
+    margin-bottom: 0.75rem;
+    position: relative;
+    z-index: 1;
+    font-weight: 500;
+    text-align: center;
+}
+
+.quote-of-the-day blockquote cite {
+    display: block;
+    font-size: 0.9rem;
+    color: #666;
+    font-style: normal;
+    text-align: center;
+    margin-top: 0.75rem;
+    font-weight: 500;
+    position: relative;
+    z-index: 1;
+}
+
+.like-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin: 1rem auto 0;
+    padding: 0.5rem 1rem;
+    background-color: transparent;
+    border: 2px solid #B8860B;
+    border-radius: 25px;
+    color: #B8860B;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 1;
+}
+
+.like-button:hover {
+    background-color: #B8860B;
+    color: white;
+    transform: scale(1.05);
+}
+
+.like-button.liked {
+    background-color: #e74c3c;
+    border-color: #e74c3c;
+    color: white;
+}
+
+.like-button.liked i {
+    color: white;
+}
+
+.like-button i {
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.like-button.liked i.fa-heart {
+    animation: heartBeat 0.5s ease;
+}
+
+@keyframes heartBeat {
+    0%, 100% {
+        transform: scale(1);
+    }
+    25% {
+        transform: scale(1.2);
+    }
+    50% {
+        transform: scale(1);
+    }
+    75% {
+        transform: scale(1.1);
+    }
+}
+
+.like-count {
+    font-weight: 600;
+    min-width: 1.5rem;
+    text-align: center;
 }
 
 footer address {
