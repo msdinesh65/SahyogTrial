@@ -17,11 +17,10 @@ header h1 {
     flex: 1;
 }
 
-#the-wanderer { background-color: #4A90E2; }
-#knowledge-hungary { background-color: #50C878; }
-#shifty-careers { background-color: #FF6B6B; }
-#dream-project { background-color: #9B59B6; }
-#contact { background-color: #F39C12; }
+#Globizen { background-color: #4A90E2; }
+#erudivore { background-color: #50C878; }
+#Reorientee { background-color: #FF6B6B; }
+#Magnum\ Opus { background-color: #9B59B6; }
 
 h2 { color: white; margin-bottom: 1rem; } footer { background-color: #B8860B; color: white; text-align: center; padding: 1rem; margin-top: 2rem; } section { transition: transform 0.3s ease, box-shadow 0.3s ease; cursor: pointer; } section:hover { transform: scale(1.05); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); }
 
@@ -208,7 +207,7 @@ h2 { color: white; margin-bottom: 1rem; } footer { background-color: #B8860B; co
 .quote-of-the-day blockquote {
     background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
     border: 3px solid #B8860B;
-    padding: 1.5rem 2rem;
+    padding: 0.975rem 1.3rem;
     margin: 0 auto;
     border-radius: 8px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
@@ -335,8 +334,8 @@ footer address {
     max-width: 900px;
     margin: 0.5rem auto;
     padding: 0.3rem 2rem;
-    background-color: #f8f8f8;
-    border-left: 5px solid #B8860B;
+    background-color: #b6b8cf;
+    border-left: 5px solid #cfcae4;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
